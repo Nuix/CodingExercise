@@ -1,0 +1,27 @@
+CREATE TEMP TABLE _goog (Date date,Open decimal,High decimal,Low decimal,Close decimal,AdjClose decimal,Volume int);
+.mode csv
+.headers on
+.import --skip 1 "C:/Users/ljfolino/Downloads/GOOG.csv" _goog 
+insert into Prices SELECT "GOOG",Date,Close FROM _goog;
+DROP TABLE _goog;
+
+CREATE TEMP TABLE _msft (Date date,Open decimal,High decimal,Low decimal,Close decimal,AdjClose decimal,Volume int);
+.mode csv
+.headers on
+.import --skip 1 "C:/Users/ljfolino/Downloads/MSFT.csv" _msft 
+insert into Prices SELECT "MSFT",Date,Close FROM _msft;
+DROP TABLE _msft;
+
+CREATE TEMP TABLE _amzn (Date date,Open decimal,High decimal,Low decimal,Close decimal,AdjClose decimal,Volume int);
+.mode csv
+.headers on
+.import --skip 1 "C:/Users/ljfolino/Downloads/AMZN.csv" _amzn 
+insert into Prices SELECT "AMZN",Date,Close FROM _amzn;
+DROP TABLE _amzn;
+
+CREATE TEMP TABLE _aapl (Date date,Open decimal,High decimal,Low decimal,Close decimal,AdjClose decimal,Volume int);
+.mode csv
+.headers on
+.import --skip 1 "C:/Users/ljfolino/Downloads/AAPL.csv" _aapl
+insert into Prices SELECT "AAPL",Date,Close FROM _aapl;
+DROP TABLE _aapl;
