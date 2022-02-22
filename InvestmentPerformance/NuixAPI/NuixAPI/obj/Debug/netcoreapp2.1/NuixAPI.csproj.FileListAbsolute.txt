@@ -1,0 +1,14 @@
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\bin\Debug\netcoreapp2.1\NuixAPI.deps.json
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\bin\Debug\netcoreapp2.1\NuixAPI.runtimeconfig.json
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\bin\Debug\netcoreapp2.1\NuixAPI.runtimeconfig.dev.json
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\bin\Debug\netcoreapp2.1\NuixAPI.dll
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.csprojAssemblyReference.cache
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.csproj.CoreCompileInputs.cache
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.RazorAssemblyInfo.cache
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.RazorAssemblyInfo.cs
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.AssemblyInfoInputs.cache
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.AssemblyInfo.cs
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.RazorTargetAssemblyInfo.cache
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\bin\Debug\netcoreapp2.1\NuixAPI.pdb
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.dll
+C:\Users\scuba\source\repos\NuixAPI\NuixAPI\obj\Debug\netcoreapp2.1\NuixAPI.pdb
