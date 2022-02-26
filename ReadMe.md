@@ -1,3 +1,21 @@
+# Instructions
+1. Open Solution Nuix_Project.
+2. Run Nuix_Project.
+3. Project will automatically open directly to Swagger.
+
+Alt
+1. Run Nuix_Project under the bin folder.
+2. Open browser to http://localhost:5000.
+3. Run Api Through Swagger.
+
+Assumptions-
+The following project uses mock data to imitate user data values. In a production environment, we can replace the mocks with dependency injection.
+User token validation has been added because open apis give me anxiety.
+
+
+
+
+
 # Coding Exercise
 > This repository holds coding exercises for candidates going through the hiring process.
 
