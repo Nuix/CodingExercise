@@ -14,10 +14,31 @@ namespace InvestmentPerformance.Business.Models
 
         public int UserId { get; set; }
 
-        public decimal Shares { get; set; }
+        public decimal AmountOfShares { get; set; }
 
         public decimal SharePurchasePrice { get; set; }
 
         public DateTime PurchaseDate { get; set; }
+
+        public TermEnum Term
+        {
+            get
+            {
+                if (DateTime.UtcNow < PurchaseDate.AddYears(1))
+                {
+                    return TermEnum.Short;
+                }
+
+                return TermEnum.Long;
+            }
+        }
+
+        public decimal PurchaseValue
+        {
+            get
+            {
+                return SharePurchasePrice * AmountOfShares;
+            }
+        }
     }
 }
