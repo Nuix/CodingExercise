@@ -26,10 +26,10 @@ namespace InvestmentPerformance.Business.Models
             {
                 if (DateTime.UtcNow < PurchaseDate.AddYears(1))
                 {
-                    return "Short";
+                    return Constants.Short;
                 }
 
-                return "Long";
+                return Constants.Long;
             }
         }
 

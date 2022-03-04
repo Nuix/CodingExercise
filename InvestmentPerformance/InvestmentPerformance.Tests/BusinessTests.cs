@@ -7,10 +7,10 @@ using InvestmentPerformance.Data.Model;
 namespace InvestmentPerformance.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class BusinessTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void current_value_should_be_calculated_correctly()
         {
             var businessservice = new BusinessService();
             var listing = new Listing
@@ -35,10 +35,8 @@ namespace InvestmentPerformance.Tests
         }        
 
         [TestMethod]
-        public void TestMethod2()
+        public void term_should_calculate_short()
         {
-            var businessservice = new BusinessService();
-
             var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
@@ -49,14 +47,12 @@ namespace InvestmentPerformance.Tests
                 UserId = 1
             };
 
-            Assert.AreEqual(TermEnum.Short, userInvestment.Term);
+            Assert.AreEqual(Constants.Short, userInvestment.Term);
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void term_should_calculate_long()
         {
-            var businessservice = new BusinessService();
-
             var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
@@ -67,11 +63,11 @@ namespace InvestmentPerformance.Tests
                 UserId = 1
             };
             
-            Assert.AreEqual(TermEnum.Long, userInvestment.Term);
+            Assert.AreEqual(Constants.Long, userInvestment.Term);
         }
 
         [TestMethod]
-        public void TestMethod4()
+        public void gain_loss_should_calculate_correctly()
         {
             var businessservice = new BusinessService();
             var listing = new Listing

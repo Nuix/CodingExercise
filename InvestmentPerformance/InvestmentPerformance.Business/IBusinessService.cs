@@ -11,10 +11,6 @@ namespace InvestmentPerformance.Business
 {
     public interface IBusinessService
     {
-        Task<decimal> GetCurrentValue(Listing listing, UserInvestmentDetailsVM userInvestment);
-
-        Task<decimal> GetGainLoss(Listing listing, UserInvestmentDetailsVM userInvestment);
-
         Task<GetUserInvestmentsByUserResponse> GetUserInvestmentVMs(int userId);
 
         Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int investmentId);
