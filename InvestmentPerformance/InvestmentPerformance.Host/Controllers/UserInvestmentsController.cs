@@ -1,6 +1,4 @@
 ﻿using InvestmentPerformance.Business;
-using InvestmentPerformance.Business.Models;
-using InvestmentPerformance.Business.Models.APIResponses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InvestmentPerformance.Host.Controllers
@@ -11,22 +9,41 @@ namespace InvestmentPerformance.Host.Controllers
     public class UserInvestmentsController : ControllerBase
     {
         private readonly IBusinessService _service;
+        private readonly ILogger<UserInvestmentsController> _logger;
 
-        public UserInvestmentsController(IBusinessService service)
+        public UserInvestmentsController(IBusinessService service, ILogger<UserInvestmentsController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpGet("/get-user-investments/{userId}")]
-        public async Task<GetUserInvestmentsByUserResponse> GetUserInvestmentsByUser(int userId)
+        public async Task<IActionResult> GetUserInvestmentsByUser(int userId)
         {
-            return await _service.GetUserInvestmentsByUser(userId);
+            try
+            {
+                return Ok(await _service.GetUserInvestmentsByUser(userId));
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet("/get-investment-details/{investmentId}")]
-        public async Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int investmentId)
+        public async Task<IActionResult> GetUserInvestmentsDetails(int investmentId)
         {
-            return await _service.GetUserInvestmentsDetails(investmentId);            
+            try
+            {
+                return Ok(await _service.GetUserInvestmentsDetails(investmentId));
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return StatusCode(500, e.Message);
+            }
+
         }
 
     }
