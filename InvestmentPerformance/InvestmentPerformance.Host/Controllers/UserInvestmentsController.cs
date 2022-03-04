@@ -20,7 +20,7 @@ namespace InvestmentPerformance.Host.Controllers
         [HttpGet("/get-user-investments/{userId}")]
         public async Task<GetUserInvestmentsByUserResponse> GetUserInvestmentsByUser(int userId)
         {
-            return await _service.GetUserInvestmentVMs(userId);
+            return await _service.GetUserInvestmentsByUser(userId);
         }
 
         [HttpGet("/get-investment-details/{investmentId}")]

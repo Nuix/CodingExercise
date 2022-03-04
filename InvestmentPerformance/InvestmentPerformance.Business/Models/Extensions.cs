@@ -9,13 +9,12 @@ namespace InvestmentPerformance.Business.Models
 {
     public static class Extensions
     {
-        public static ListingVM MapFrom(this ListingVM mapTo, Listing mapFrom)
+        public static UserInvestmentVM MapFrom(this UserInvestmentVM mapTo, UserInvestment mapFrom)
         {
-            return new ListingVM
+            return new UserInvestmentVM
             {
-                CompanyName = mapFrom.CompanyName,
-                CurrentPrice = mapFrom.CurrentPrice,
-                Id = mapFrom.Id
+                InvestmentId = mapFrom.Id,
+                CompanyName = mapFrom.Listing.CompanyName
             };
         }
 

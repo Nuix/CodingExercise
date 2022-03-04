@@ -11,7 +11,7 @@ namespace InvestmentPerformance.Business
 {
     public interface IBusinessService
     {
-        Task<GetUserInvestmentsByUserResponse> GetUserInvestmentVMs(int userId);
+        Task<GetUserInvestmentsByUserResponse> GetUserInvestmentsByUser(int userId);
 
         Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int investmentId);
     }

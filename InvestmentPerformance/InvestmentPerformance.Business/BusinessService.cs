@@ -13,11 +13,11 @@ namespace InvestmentPerformance.Business
 {
     public class BusinessService : IBusinessService
     {
-        public async Task<GetUserInvestmentsByUserResponse> GetUserInvestmentVMs(int userId)
+        public async Task<GetUserInvestmentsByUserResponse> GetUserInvestmentsByUser(int userId)
         {
             var response = new GetUserInvestmentsByUserResponse
             {
-                Investments = new List<UserInvestmentDetailsVM>()
+                Investments = new List<UserInvestmentVM>()
             };
 
             using (var context = new InvestmentPerformanceContext())
@@ -43,7 +43,7 @@ namespace InvestmentPerformance.Business
 
                 foreach (var ui in userInvestments)
                 {
-                    var newVM = new UserInvestmentDetailsVM().MapFrom(ui);
+                    var newVM = new UserInvestmentVM().MapFrom(ui);
                     response.Investments.Add(newVM);
                 }
 
