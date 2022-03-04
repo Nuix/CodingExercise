@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Business.Models
 {
-    public class Listing
+    public class UserVM
     {
         public int Id { get; set; }
 
-        public string CompanyName { get; set; }
+        public string LastName { get; set; }
 
-        public decimal CurrentPrice { get; set; }
+        public string FirstName { get; set; }
+
+        public string FullName => $"{FirstName} {LastName}";
     }
 }

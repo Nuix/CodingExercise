@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Business.Models
 {
-    public class UserInvestment
+    public class UserInvestmentDetailsVM
     {
         public int Id { get; set; }
 
@@ -20,16 +20,16 @@ namespace InvestmentPerformance.Business.Models
 
         public DateTime PurchaseDate { get; set; }
 
-        public TermEnum Term
+        public string Term
         {
             get
             {
                 if (DateTime.UtcNow < PurchaseDate.AddYears(1))
                 {
-                    return TermEnum.Short;
+                    return "Short";
                 }
 
-                return TermEnum.Long;
+                return "Long";
             }
         }
 
@@ -40,5 +40,11 @@ namespace InvestmentPerformance.Business.Models
                 return SharePurchasePrice * AmountOfShares;
             }
         }
+
+        public decimal CurrentValue { get; set; }
+
+        public decimal GainLoss { get; set; }        
+
+        public string CompanyName { get; set; }
     }
 }

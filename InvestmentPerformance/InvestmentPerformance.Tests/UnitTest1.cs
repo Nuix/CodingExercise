@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using InvestmentPerformance.Business;
 using InvestmentPerformance.Business.Models;
 using System;
+using InvestmentPerformance.Data.Model;
 
 namespace InvestmentPerformance.Tests
 {
@@ -19,7 +20,7 @@ namespace InvestmentPerformance.Tests
                 Id = 1
             };
 
-            var userInvestment = new UserInvestment
+            var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
@@ -38,7 +39,7 @@ namespace InvestmentPerformance.Tests
         {
             var businessservice = new BusinessService();
 
-            var userInvestment = new UserInvestment
+            var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
@@ -56,7 +57,7 @@ namespace InvestmentPerformance.Tests
         {
             var businessservice = new BusinessService();
 
-            var userInvestment = new UserInvestment
+            var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
@@ -80,7 +81,7 @@ namespace InvestmentPerformance.Tests
                 Id = 1
             };
 
-            var userInvestment = new UserInvestment
+            var userInvestment = new UserInvestmentDetailsVM
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
