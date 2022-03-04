@@ -20,58 +20,56 @@ namespace InvestmentPerformance.Business
                 Investments = new List<UserInvestmentVM>()
             };
 
-            using (var context = new InvestmentPerformanceContext())
+            try
             {
-                var user = context.Users.Find(userId);
-
-                if (user == null)
+                using (var context = new InvestmentPerformanceContext())
                 {
-                    throw new Exception("User not found");
+                    var user = context.Users.Find(userId);
+
+                    if (user == null)
+                    {
+                        throw new Exception("User not found");
+                    }
+
+                    var userInvestments = await context.UserInvestments
+                        .Include(ui => ui.Listing)
+                        .Where(x => x.UserId == userId)
+                        .ToListAsync();
+
+                    response.User = new UserVM().MapFrom(user);
+                    response.Investments = userInvestments.Select(x => new UserInvestmentVM().MapFrom(x)).ToList();
                 }
-
-                var userInvestments = await context.UserInvestments
-                    .Include(ui => ui.Listing)
-                    .Where(x => x.UserId == userId)
-                    .ToListAsync();
-
-                response.User = new UserVM
-                {
-                    FirstName = user.FirstName,
-                    Id = user.Id,
-                    LastName = user.LastName
-                };
-
-                foreach (var ui in userInvestments)
-                {
-                    var newVM = new UserInvestmentVM().MapFrom(ui);
-                    response.Investments.Add(newVM);
-                }
-
             }
+            catch (Exception)
+            {
+                // log error
+                throw;
+            }            
 
             return response;
         }
 
         public async Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int investmentId)
         {
-            var response = new GetUserInvestmentsDetailsResponse
-            {
-                UserInvestments = new List<UserInvestmentDetailsVM>()
-            };
+            var response = new GetUserInvestmentsDetailsResponse();
 
-            using (var context = new InvestmentPerformanceContext())
+            try
             {
-                var userInvestments = await context.UserInvestments
-                .Include(ui => ui.Listing)
-                .Where(x => x.Id == investmentId)
-                .ToListAsync();
-
-                foreach (var ui in userInvestments)
+                using (var context = new InvestmentPerformanceContext())
                 {
-                    var newVM = new UserInvestmentDetailsVM().MapFrom(ui);
-                    response.UserInvestments.Add(newVM);
+                    var userInvestments = await context.UserInvestments
+                    .Include(ui => ui.Listing)
+                    .Where(x => x.Id == investmentId)
+                    .ToListAsync();
+
+                    response.UserInvestments = userInvestments.Select(x => new UserInvestmentDetailsVM().MapFrom(x)).ToList();
                 }
             }
+            catch (Exception)
+            {
+                // log error
+                throw;
+            }            
 
             return response;
         }

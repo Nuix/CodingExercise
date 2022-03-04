@@ -9,6 +9,15 @@ namespace InvestmentPerformance.Business.Models
 {
     public static class Extensions
     {
+        public static UserVM MapFrom(this UserVM mapTo, User mapFrom)
+        {
+            return new UserVM
+            {
+                Id = mapFrom.Id,
+                FullName = $"{mapFrom.FirstName} {mapFrom.LastName}"
+            };
+        }
+
         public static UserInvestmentVM MapFrom(this UserInvestmentVM mapTo, UserInvestment mapFrom)
         {
             return new UserInvestmentVM
@@ -28,13 +37,8 @@ namespace InvestmentPerformance.Business.Models
 
             return new UserInvestmentDetailsVM
             {
-                Id = mapFrom.Id,
                 AmountOfShares = mapFrom.AmountOfShares,
-                ListingId = mapFrom.ListingId,
-                PurchaseDate = mapFrom.PurchaseDate,
                 SharePurchasePrice = mapFrom.SharePurchasePrice,
-                UserId = mapFrom.UserId,
-                CompanyName = mapFrom.Listing.CompanyName,
                 CurrentPrice = mapFrom.Listing.CurrentPrice,
                 GainLoss = gainLoss,
                 CurrentValue = currentValue,

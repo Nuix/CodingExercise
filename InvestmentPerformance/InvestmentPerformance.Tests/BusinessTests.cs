@@ -100,19 +100,24 @@ namespace InvestmentPerformance.Tests
                 }
             };
 
-            var userInvestment = new UserInvestmentDetailsVM
-            {
-                Id = 1,
-                AmountOfShares = 54.67m,
-                ListingId = 1,
-                PurchaseDate = new DateTime(2022, 3, 3),
-                SharePurchasePrice = 52.33m,
-                UserId = 1
-            };
-
             var userInvestmentDetailsVM = new UserInvestmentDetailsVM().MapFrom(ui);
 
             Assert.AreEqual(3888.1304m, userInvestmentDetailsVM.GainLoss);
+        }
+
+        [TestMethod]
+        public void full_name_should_map_correctly()
+        {
+            var u = new User
+            {
+                Id = 1,
+                FirstName = "Shane",
+                LastName = "Todd"
+            };
+
+            var userVM = new UserVM().MapFrom(u);
+
+            Assert.AreEqual("Shane Todd", userVM.FullName);
         }
     }
 }
