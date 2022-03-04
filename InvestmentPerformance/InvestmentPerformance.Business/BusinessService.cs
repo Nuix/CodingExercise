@@ -44,8 +44,6 @@ namespace InvestmentPerformance.Business
                 foreach (var ui in userInvestments)
                 {
                     var newVM = new UserInvestmentDetailsVM().MapFrom(ui);
-                    newVM.CurrentValue = GetCurrentValue(ui.Listing, newVM);
-                    newVM.GainLoss = GetGainLoss(ui.Listing, newVM);
                     response.Investments.Add(newVM);
                 }
 
@@ -71,23 +69,12 @@ namespace InvestmentPerformance.Business
                 foreach (var ui in userInvestments)
                 {
                     var newVM = new UserInvestmentDetailsVM().MapFrom(ui);
-                    newVM.CurrentValue = GetCurrentValue(ui.Listing, newVM);
-                    newVM.GainLoss = GetGainLoss(ui.Listing, newVM);
                     response.UserInvestments.Add(newVM);
                 }
             }
 
             return response;
         }
-        
-        public decimal GetCurrentValue(Listing listing, UserInvestmentDetailsVM userInvestment)
-        {
-            return listing.CurrentPrice * userInvestment.AmountOfShares;
-        }
 
-        public decimal GetGainLoss(Listing listing, UserInvestmentDetailsVM userInvestment)
-        {
-            return GetCurrentValue(listing, userInvestment) - userInvestment.PurchaseValue;
-        }
     }
 }

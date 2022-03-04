@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Business.Models.APIResponses
 {
-    public  class GetUserInvestmentsDetailsResponse
+    public class GetUserInvestmentsDetailsResponse
     {
         public List<UserInvestmentDetailsVM> UserInvestments { get; set; }
     }

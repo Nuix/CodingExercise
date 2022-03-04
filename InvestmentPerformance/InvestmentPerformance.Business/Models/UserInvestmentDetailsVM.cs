@@ -2,49 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Business.Models
 {
     public class UserInvestmentDetailsVM
     {
-        public int Id { get; set; }
-
-        public int ListingId { get; set; }
-
-        public int UserId { get; set; }
-
         public decimal AmountOfShares { get; set; }
 
         public decimal SharePurchasePrice { get; set; }
 
-        public DateTime PurchaseDate { get; set; }
-
-        public string Term
-        {
-            get
-            {
-                if (DateTime.UtcNow < PurchaseDate.AddYears(1))
-                {
-                    return Constants.Short;
-                }
-
-                return Constants.Long;
-            }
-        }
-
-        public decimal PurchaseValue
-        {
-            get
-            {
-                return SharePurchasePrice * AmountOfShares;
-            }
-        }
-
         public decimal CurrentValue { get; set; }
 
-        public decimal GainLoss { get; set; }        
+        public decimal CurrentPrice { get; set; }
 
+        public string Term { get; set; }
+
+        public decimal GainLoss { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
+        public int Id { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
+        public int ListingId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
+        public int UserId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
+        public DateTime PurchaseDate { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public string CompanyName { get; set; }
     }
 }

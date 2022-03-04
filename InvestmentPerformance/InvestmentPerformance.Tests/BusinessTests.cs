@@ -12,69 +12,92 @@ namespace InvestmentPerformance.Tests
         [TestMethod]
         public void current_value_should_be_calculated_correctly()
         {
-            var businessservice = new BusinessService();
-            var listing = new Listing
-            {
-                CompanyName = "Alphabet",
-                CurrentPrice = 123.45m,
-                Id = 1
-            };
-
-            var userInvestment = new UserInvestmentDetailsVM
+            var ui = new UserInvestment
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
                 ListingId = 1,
                 PurchaseDate = new DateTime(2022, 3, 3),
                 SharePurchasePrice = 52.33m,
-                UserId = 1
+                UserId = 1,
+                Listing = new Listing
+                {
+                    CompanyName = "Alphabet",
+                    CurrentPrice = 123.45m,
+                    Id = 1
+                }
             };
 
-            var currentPrice = businessservice.GetCurrentValue(listing, userInvestment);
-            Assert.AreEqual(6749.0115m, currentPrice);
-        }        
+            var userInvestmentDetailsVM = new UserInvestmentDetailsVM().MapFrom(ui);
+
+            Assert.AreEqual(6749.0115m, userInvestmentDetailsVM.CurrentValue);
+        }
 
         [TestMethod]
         public void term_should_calculate_short()
         {
-            var userInvestment = new UserInvestmentDetailsVM
+            var ui = new UserInvestment
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
                 ListingId = 1,
                 PurchaseDate = new DateTime(2022, 3, 3),
                 SharePurchasePrice = 52.33m,
-                UserId = 1
+                UserId = 1,
+                Listing = new Listing
+                {
+                    CompanyName = "Sony",
+                    CurrentPrice = 321.89m,
+                    Id = 1
+                }
             };
 
-            Assert.AreEqual(Constants.Short, userInvestment.Term);
+            var userInvestmentVM = new UserInvestmentDetailsVM().MapFrom(ui);
+
+            Assert.AreEqual(Constants.Short, userInvestmentVM.Term);
         }
 
         [TestMethod]
         public void term_should_calculate_long()
         {
-            var userInvestment = new UserInvestmentDetailsVM
+            var ui = new UserInvestment
             {
                 Id = 1,
                 AmountOfShares = 54.67m,
                 ListingId = 1,
                 PurchaseDate = new DateTime(2021, 3, 3),
                 SharePurchasePrice = 52.33m,
-                UserId = 1
+                UserId = 1,
+                Listing = new Listing
+                {
+                    CompanyName = "Meta",
+                    CurrentPrice = 321.89m,
+                    Id = 1                    
+                }
             };
-            
+
+            var userInvestment = new UserInvestmentDetailsVM().MapFrom(ui);
+
             Assert.AreEqual(Constants.Long, userInvestment.Term);
         }
 
         [TestMethod]
         public void gain_loss_should_calculate_correctly()
         {
-            var businessservice = new BusinessService();
-            var listing = new Listing
+            var ui = new UserInvestment
             {
-                CompanyName = "Alphabet",
-                CurrentPrice = 123.45m,
-                Id = 1
+                Id = 1,
+                AmountOfShares = 54.67m,
+                ListingId = 1,
+                PurchaseDate = new DateTime(2022, 3, 3),
+                SharePurchasePrice = 52.33m,
+                UserId = 1,
+                Listing = new Listing
+                {
+                    CompanyName = "Alphabet",
+                    CurrentPrice = 123.45m,
+                    Id = 1
+                }
             };
 
             var userInvestment = new UserInvestmentDetailsVM
@@ -87,8 +110,9 @@ namespace InvestmentPerformance.Tests
                 UserId = 1
             };
 
-            var gainLoss = businessservice.GetGainLoss(listing, userInvestment);
-            Assert.AreEqual(3888.1304m, gainLoss);
+            var userInvestmentDetailsVM = new UserInvestmentDetailsVM().MapFrom(ui);
+
+            Assert.AreEqual(3888.1304m, userInvestmentDetailsVM.GainLoss);
         }
     }
 }
