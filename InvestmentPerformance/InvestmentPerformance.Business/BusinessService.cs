@@ -41,18 +41,23 @@ namespace InvestmentPerformance.Business
             return response;
         }
 
-        public async Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int investmentId)
+        public async Task<GetUserInvestmentsDetailsResponse> GetUserInvestmentsDetails(int userInvestmentId)
         {
             var response = new GetUserInvestmentsDetailsResponse();
 
             using (var context = new InvestmentPerformanceContext())
             {
-                var userInvestments = await context.UserInvestments
-                .Include(ui => ui.Listing)
-                .Where(x => x.Id == investmentId)
-                .ToListAsync();
+                var userInvestment = await context.UserInvestments
+                    .Include(ui => ui.Listing)
+                    .Where(x => x.Id == userInvestmentId)
+                    .FirstOrDefaultAsync();
 
-                response.UserInvestments = userInvestments.Select(x => new UserInvestmentDetailsVM().MapFrom(x)).ToList();
+                if (userInvestment == null)
+                {
+                    throw new Exception($"Investment ID {userInvestmentId} not found!");
+                }
+
+                response.UserInvestment = new UserInvestmentDetailsVM().MapFrom(userInvestment);
             }
 
             return response;

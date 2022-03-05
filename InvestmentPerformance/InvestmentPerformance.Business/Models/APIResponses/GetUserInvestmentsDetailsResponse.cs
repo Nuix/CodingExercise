@@ -8,6 +8,6 @@ namespace InvestmentPerformance.Business.Models.APIResponses
 {
     public class GetUserInvestmentsDetailsResponse
     {
-        public List<UserInvestmentDetailsVM> UserInvestments { get; set; }
+        public UserInvestmentDetailsVM UserInvestment { get; set; }
     }
 }
