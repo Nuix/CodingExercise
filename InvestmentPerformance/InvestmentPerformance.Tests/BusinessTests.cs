@@ -3,6 +3,7 @@ using InvestmentPerformance.Business;
 using InvestmentPerformance.Business.Models;
 using System;
 using InvestmentPerformance.Data.Model;
+using Shouldly;
 
 namespace InvestmentPerformance.Tests
 {
@@ -30,7 +31,7 @@ namespace InvestmentPerformance.Tests
 
             var userInvestmentDetailsVM = new UserInvestmentDetailsVM().MapFrom(ui);
 
-            Assert.AreEqual(6749.0115m, userInvestmentDetailsVM.CurrentValue);
+            userInvestmentDetailsVM.CurrentValue.ShouldBe(6749.0115m);
         }
 
         [TestMethod]
@@ -54,7 +55,7 @@ namespace InvestmentPerformance.Tests
 
             var userInvestmentVM = new UserInvestmentDetailsVM().MapFrom(ui);
 
-            Assert.AreEqual(Constants.Short, userInvestmentVM.Term);
+            userInvestmentVM.Term.ShouldBe(Constants.Short);
         }
 
         [TestMethod]
@@ -78,7 +79,7 @@ namespace InvestmentPerformance.Tests
 
             var userInvestment = new UserInvestmentDetailsVM().MapFrom(ui);
 
-            Assert.AreEqual(Constants.Long, userInvestment.Term);
+            userInvestment.Term.ShouldBe(Constants.Long);
         }
 
         [TestMethod]
@@ -102,7 +103,7 @@ namespace InvestmentPerformance.Tests
 
             var userInvestmentDetailsVM = new UserInvestmentDetailsVM().MapFrom(ui);
 
-            Assert.AreEqual(3888.1304m, userInvestmentDetailsVM.GainLoss);
+            userInvestmentDetailsVM.GainLoss.ShouldBe(3888.1304m);
         }
 
         [TestMethod]
@@ -117,7 +118,7 @@ namespace InvestmentPerformance.Tests
 
             var userVM = new UserVM().MapFrom(u);
 
-            Assert.AreEqual("Shane Todd", userVM.FullName);
+            userVM.FullName.ShouldBe("Shane Todd");
         }
     }
 }
