@@ -7,7 +7,7 @@ using InvestmentPerformance.Data.Model;
 
 namespace InvestmentPerformance.Business.Models
 {
-    public static class Extensions
+    public static class Mappers
     {
         public static UserVM MapFrom(this UserVM mapTo, User mapFrom)
         {

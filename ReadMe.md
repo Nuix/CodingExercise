@@ -1,3 +1,24 @@
+# Instructions and Description
+This solution is a C# .Net 6 Web API application 
+**Instructions**
+-Intstall Visual Studio 2022 with .Net 6
+-Running InvestmentPerformance.Host should automatically open your browser to the Swagger index page
+
+Projects in solution:
+**InvestmentPerformance.Host**
+- Web API project
+- Configured to use Swagger when debugging to test the APIs
+- This should be set as the startup project
+**InvestmentPerformance.Data**
+- Contains a local database file and models of the data structure created with Entity Framework
+- Entity Framework context used to interact with the database file
+- Referenced by Business project
+**InvestmentPerformance.Business**
+- Business logic to map domain models to view models
+- Entity Framework calls to database
+**InvestmentPerformance.Tests**
+- Tests for the Host and Business projects
+
 # Coding Exercise
 > This repository holds coding exercises for candidates going through the hiring process.
 

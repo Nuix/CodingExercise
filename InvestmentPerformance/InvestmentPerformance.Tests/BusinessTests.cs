@@ -37,6 +37,8 @@ namespace InvestmentPerformance.Tests
         [TestMethod]
         public void term_should_calculate_short()
         {
+            // should use fakes to shim a specific datetime but
+            // fakes are not available in Visual Studio Community
             var ui = new UserInvestment
             {
                 Id = 1,
