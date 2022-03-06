@@ -4,9 +4,16 @@ This solution is a C# .Net 6 Web API application
 
 **Instructions**
 - Intstall Visual Studio 2022 with .Net 6
-- Running InvestmentPerformance.Host should automatically open your browser toc the Swagger index page
+- Running InvestmentPerformance.Host should automatically open your browser to the Swagger index page
 - A log file will be produced in a "log" folder in the the solution folder if any errors are thrown
+- An alternative to running through Visual Studio:
+ - Navigate to \InvestmentPerformance\InvestmentPerformance.Host
+ - In Command Prompt, run this command: dotnet run
+ - The project will be built and accessible at https://localhost:7229/
 
+**Assumptions**
+- This is a part of a larger application where a robust form of authentication is already implemented
+ 
 Projects in solution:
 
 **InvestmentPerformance.Host**
