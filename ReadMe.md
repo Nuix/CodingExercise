@@ -1,8 +1,9 @@
 # Instructions and Description
 This solution is a C# .Net 6 Web API application 
 **Instructions**
--Intstall Visual Studio 2022 with .Net 6
--Running InvestmentPerformance.Host should automatically open your browser to the Swagger index page
+- Intstall Visual Studio 2022 with .Net 6
+- Running InvestmentPerformance.Host should automatically open your browser toc the Swagger index page
+- A log file will be produced in a "log" folder in the the solution folder if any errors are thrown
 
 Projects in solution:
 **InvestmentPerformance.Host**
