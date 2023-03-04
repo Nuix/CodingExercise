@@ -1,6 +1,6 @@
 # Solution to Investment Performance Web API
 
-The solution is writteen using .Net 6 and EF core in-memory database. The solution creates two endpoints to query investment data. 
+The solution is written using .Net 6 and EF core in-memory database. The solution creates two endpoints to query investment data. 
 1. **(GET) /api​/Invest​/userid** This returns the investment ID and Name of all the shares owned by the given user. 
 
 2. **(GET) /api​/Invest​/userid/investmentId** This returns the specified investment details such as number of shares, current price, etc. of a specific investment of the given user.
