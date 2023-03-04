@@ -6,9 +6,9 @@ The solution is writteen using .Net 6 and EF core in-memory database. The soluti
 2. **(GET) /api​/Invest​/userid/investmentId** This returns the specified investment details such as number of shares, current price, etc. of a specific investment of the given user.
 
 ## Solution Structure
-* Solution: [InvestmentSolution](InvestmentPerformance/)
-    - Web API project: [InvestmentPerformance](InvestmentPerformance/InvestmentPerformance/)
-    - Unit Test project: [TestInvestment](InvestmentPerformance/TestInvestment)
+* Solution: [InvestmentSolution](/tree/master/InvestmentSolution)
+    - Web API project: [InvestmentPerformance](/tree/master/InvestmentSolution/InvestmentPerformance)
+    - Unit Test project: [TestInvestment](/tree/master/InvestmentSolution/TestInvestment)
 
 ## Instructions
 
