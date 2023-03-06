@@ -13,7 +13,6 @@
     "prisma": "^4.11.0"
   },
   "scripts": {
-    "bootstrap": "node ./scripts/bootstrap.js",
     "start": "node ./scripts/serve.js",
     "dev": "nodemon ./scripts/serve.js"
   },
