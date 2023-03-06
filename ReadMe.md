@@ -7,7 +7,90 @@ Instructions: Fork this repository, do the assigned work, and submit a pull requ
 
 [Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
 
-[Online Ordering SQL](OnlineOrderingSQL.md#online-ordering)
+# Implementation
+
+-  NodeJS back-end
+-  Prisma ORM
+
+Set your environment variables in a root `.env` file, including the port 
+and host and your database connection string.
+
+To quickly bootstrap an ENV file run:
+
+```
+$ cp .env.example ./env
+```
+
+
+
+Example connection string:
+
+`sqlserver://192.168.1.14:1433;database=test-database; TrustServerCertificate=true;User Id=sa;Password=supersecret`
+
+## Install yarn globally
+
+```
+$ npm i -g yarn
+```
+
+Alternatively you can run the following commands with `npm`
+
+## Install Dependencies
+
+```
+$ yarn install
+```
+
+Install local JS dependencies including Express and other packages
+
+## Database Migration & Seeding
+```
+$ yarn prisma migrate dev --schema database/schema.prisma
+```
+
+Alternatively, migration files will be available to run manually to set up 
+the database.  Running the prisma migration command will automatically seed 
+the database after migrating.
+
+To manually seed the database run `$ yarn prisma seed`.
+
+## Start The Server
+
+```
+$ yarn start
+```
+
+Will start the NodeJS HTTP service.
+
+```
+$ yarn dev
+```
+
+Will launch `nodemon`and reload the development server when a file inside of 
+`./src` changes.
+
+
+## Querying the API
+
+Once the database is seeded, two endpoints can be called:
+
+`/api/users/{userId}/investments`
+
+This endpoint will return a list of a given users' investments.
+
+
+`/api/users/{userId}/investments/{investmentId}`
+
+This endpoint will return the details of the investment a user has made.
+
+## Considerations
+
+-  Setup Express to return JSON / API format (no views or front-end)
+-  Setup dependency injection in the HTTP stack
+- Passes a configuration of possible error messages
+- Injects a list of pointers to service layer functions
+- API Error Handling
+- API endpoints will return a general error response and a 400 status code
 
 # License
 

@@ -1,0 +1,26 @@
+{
+  "name": "nuix-coding-exercise-greg",
+  "description": "A NodeJS implementation of a RESTful API.  Uses ExpressJS for the HTTP stack and Prisma for the ORM.",
+  "author": "Greg Gushard",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@prisma/client": "4.11.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-useragent": "^1.0.15",
+    "http-errors": "^2.0.0",
+    "prisma": "^4.11.0"
+  },
+  "scripts": {
+    "bootstrap": "node ./scripts/bootstrap.js",
+    "start": "node ./scripts/serve.js",
+    "dev": "nodemon ./scripts/serve.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "prisma": {
+    "seed": "node database/seed.js"
+  }
+}
