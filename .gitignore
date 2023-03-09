@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/InvestmentAPI/.vs
+/InvestmentAPI/bin/Debug/netstandard2.0
+/InvestmentAPI/obj
+/InvestmentAPITests/bin/Debug/net6.0
+/InvestmentAPITests/obj
+/InvestmentDB/bin/Debug
+/InvestmentDB/obj/Debug
+/InvestmentWebAPI/bin/Debug/net6.0
+/InvestmentWebAPI/obj
+/InvestmentDB/InvestmentDB.publish.xml
+/IntegrationTests/obj
+/IntegrationTests/bin/Debug/net6.0
+/InvestmentDB/InvestmentDB.jfm
+*.dbmdl
