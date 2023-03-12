@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    public interface IInvestmentService
+    public interface IInvestmentPerformanceService
     {
         List<UserInvestment> GetInvestmentsListByUserId(int userId);
         List<StockInvestmentDetail> GetStockInvestmentDetails(int investmentId);

@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class InvestmentService : IInvestmentService
+    public class InvestmentPerformanceService : IInvestmentPerformanceService
     {
         private readonly IInvestmentRepository _investmentRepository;
         private readonly IStockInvestmentRepository _stockInvestmentRepository;
         private readonly IStockRepository _stockRepository;
 
-        public InvestmentService(IInvestmentRepository investmentRepository, IStockInvestmentRepository stockInvestmentRepository, IStockRepository stockRepository)
+        public InvestmentPerformanceService(IInvestmentRepository investmentRepository, IStockInvestmentRepository stockInvestmentRepository, IStockRepository stockRepository)
         {
             _investmentRepository = investmentRepository;
             _stockInvestmentRepository = stockInvestmentRepository;
@@ -45,7 +45,7 @@ namespace Application.Services
                     CostBasisPerShare = inv.PricePerShare,
                     NumberOfShares = inv.SharesQuantity,
                     CurrentSharePrice = stockSharePrices[inv.StockId],
-                    PurchasedDate= inv.PurchasedDate,
+                    PurchasedDate= inv.PurchasedDate
                 });
             }
 

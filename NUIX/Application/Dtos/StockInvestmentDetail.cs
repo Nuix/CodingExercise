@@ -16,11 +16,11 @@ namespace Application.Dtos
         public int NumberOfShares { get; set; }
         public decimal CurrentSharePrice { get; set; }
 
-        public StockPeriod Term { get {
+        public string Term { get {
 
                 int daysDiff = DateTime.UtcNow.Subtract(PurchasedDate).Days;
 
-                return daysDiff <= 365 ? StockPeriod.ShortTerm : StockPeriod.LongTerm;
+                return daysDiff <= 365 ? StockPeriod.ShortTerm.ToString() : StockPeriod.LongTerm.ToString();
             } 
         }
 
