@@ -1,3 +1,5 @@
+using Application.ConcreteObjects;
+using Application.Core;
 using Application.Interfaces;
 using Application.Services;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ builder.Services.AddTransient<IInvestmentPerformanceService, InvestmentPerforman
 builder.Services.AddTransient<IInvestmentRepository, InvestmentRepository>();
 builder.Services.AddTransient<IStockInvestmentRepository, StockInvestmentRepository>();
 builder.Services.AddTransient<IStockRepository, StockRepository>();
+builder.Services.AddTransient<InvestmentFactory, InvestmentFactory>();
 
 
 

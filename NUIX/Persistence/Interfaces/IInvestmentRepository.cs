@@ -9,5 +9,6 @@ namespace Persistence.Interfaces
 {
     public interface IInvestmentRepository : IRepository<Investment>
     {
+        int GetInvestmentTypeId(int investmentId);
     }
 }

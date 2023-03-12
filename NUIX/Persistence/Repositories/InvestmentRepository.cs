@@ -1,10 +1,5 @@
 ﻿using Domain.Entities;
 using Persistence.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Repositories
 {
@@ -12,6 +7,16 @@ namespace Persistence.Repositories
     {
         public InvestmentRepository(DataBaseContext context) : base(context)
         {
+        }
+
+        public int GetInvestmentTypeId(int investmentId)
+        {
+            var investment = _context.Investments.Find(investmentId);
+
+            if(investment == null) 
+                throw new Exception($"Investment data not found for id: {investmentId}");
+
+            return investment.InvestmentTypeId;
         }
     }
 }

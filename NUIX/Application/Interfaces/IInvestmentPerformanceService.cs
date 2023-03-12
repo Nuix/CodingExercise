@@ -12,6 +12,6 @@ namespace Application.Interfaces
     public interface IInvestmentPerformanceService
     {
         List<UserInvestment> GetInvestmentsListByUserId(int userId);
-        List<StockInvestmentDetail> GetStockInvestmentDetails(int investmentId);
+        List<object> GetInvestmentDetailsById(int investmentId);
     }
 }
