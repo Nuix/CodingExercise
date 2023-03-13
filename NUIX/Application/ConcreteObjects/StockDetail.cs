@@ -27,6 +27,8 @@ namespace Application.ConcreteObjects
             {
                 returnList.Add(new StockInvestmentDetail
                 {
+                    InvestmentId = inv.InvestmentId,
+                    StockId= inv.StockId,
                     CostBasisPerShare = inv.PricePerShare,
                     NumberOfShares = inv.SharesQuantity,
                     CurrentSharePrice = stockSharePrices[inv.StockId],

@@ -29,7 +29,7 @@ namespace Application.Core
                     return _serviceProvider.GetService<MutualFundDetail>();
 
                 default:
-                    throw new NotImplementedException();
+                    throw new NotImplementedException($"Investment type not implemented: {investmentType}");
             }
         }
     }

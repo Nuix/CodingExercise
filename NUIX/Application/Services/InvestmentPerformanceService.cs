@@ -34,6 +34,7 @@ namespace Application.Services
         {
             var investmentType = _investmentRepository.GetInvestmentTypeId(investmentId);
             var objectInstance = _investmentFactory.GetInvestmentDetailInstance((InvestmentTypes)investmentType);
+
             return objectInstance.GetInvestmentDetails(investmentId);
         }
     }
