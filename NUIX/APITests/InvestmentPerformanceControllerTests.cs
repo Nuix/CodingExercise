@@ -1,8 +1,10 @@
 ﻿using API.Controllers;
+using Application.ConcreteObjects;
 using Application.Core;
 using Application.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Persistence;
@@ -62,12 +64,24 @@ namespace APITests
         {
             var service = new InvestmentPerformanceService(
                new Mock<InvestmentRepository>(context).Object,
-               new Mock<InvestmentFactory>(
-                                        new Mock<StockInvestmentRepository>(context).Object,
-                                        new Mock<StockRepository>(context).Object
+               new Mock<InvestmentDetailFactory>(
+                                        GetServiceProvider(context)
+                                        
                    ).Object
                );
             return service;
+        }
+
+        private IServiceProvider GetServiceProvider(DataBaseContext context)
+        {
+            var serviceCollection = new ServiceCollection(); 
+            serviceCollection.AddScoped(sp => new Mock<StockDetail>(
+                    new Mock<StockInvestmentRepository>(context).Object,
+                    new Mock<StockRepository>(context).Object
+                ).Object);
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+            return serviceProvider;
         }
     }
 }

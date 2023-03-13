@@ -4,11 +4,11 @@ using Persistence.Interfaces;
 
 namespace Application.ConcreteObjects
 {
-    public class StockDeTail : IInvestmentDetail
+    public class StockDetail : IInvestmentDetail
     {
         private readonly IStockInvestmentRepository _stockInvestmentRepository;
         private readonly IStockRepository _stockRepository;
-        public StockDeTail(IStockInvestmentRepository stockInvestmentRepository, IStockRepository stockRepository)
+        public StockDetail(IStockInvestmentRepository stockInvestmentRepository, IStockRepository stockRepository)
         {
 
             _stockInvestmentRepository = stockInvestmentRepository;

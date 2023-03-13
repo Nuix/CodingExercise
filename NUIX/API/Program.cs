@@ -27,8 +27,10 @@ builder.Services.AddTransient<IInvestmentPerformanceService, InvestmentPerforman
 builder.Services.AddTransient<IInvestmentRepository, InvestmentRepository>();
 builder.Services.AddTransient<IStockInvestmentRepository, StockInvestmentRepository>();
 builder.Services.AddTransient<IStockRepository, StockRepository>();
-builder.Services.AddTransient<InvestmentFactory, InvestmentFactory>();
-
+builder.Services.AddScoped<InvestmentDetailFactory>();
+builder.Services.AddScoped<StockDetail>();
+builder.Services.AddScoped<BondDetail>();
+builder.Services.AddScoped<MutualFundDetail>();
 
 
 var app = builder.Build();

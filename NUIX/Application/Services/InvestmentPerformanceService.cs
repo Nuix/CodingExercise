@@ -10,9 +10,9 @@ namespace Application.Services
     public class InvestmentPerformanceService : IInvestmentPerformanceService
     {
         private readonly IInvestmentRepository _investmentRepository;
-        private readonly InvestmentFactory _investmentFactory;
+        private readonly InvestmentDetailFactory _investmentFactory;
 
-        public InvestmentPerformanceService(IInvestmentRepository investmentRepository, InvestmentFactory investmentFactory)
+        public InvestmentPerformanceService(IInvestmentRepository investmentRepository, InvestmentDetailFactory investmentFactory)
         {
             _investmentRepository = investmentRepository;
             _investmentFactory = investmentFactory;
