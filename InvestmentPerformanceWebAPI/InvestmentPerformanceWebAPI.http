@@ -1,0 +1,6 @@
+@InvestmentPerformanceWebAPI_HostAddress = http://localhost:5265
+
+GET {{InvestmentPerformanceWebAPI_HostAddress}}/Investment/
+Accept: application/json
+
+###
