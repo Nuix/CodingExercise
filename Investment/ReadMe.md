@@ -28,14 +28,14 @@ This should start a WebAPI on your machine.  It will output a URL where it is li
 
 To get a list of current investments for the user, send a request to:
 ```
-localhost:[port]/investment/foruser/[userId]
+localhost:[port]/Investment/ForUser/[userId]
 ```
 The database currently contains 5 users with IDs ranging from 1 to 5.
 
 
 To get details for a user's investment, send a request to:
 ```
-localhost:[port]/investment/foruser/[investmentId]
+localhost:[port]/Investment/Detailed/[investmentId]
 ```
 The database currently contains 11 investments with IDs ranging from 1 to 11.  Alternatively, you can pick an investmentId from the response to the foruser API call.
 
