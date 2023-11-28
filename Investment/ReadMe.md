@@ -5,7 +5,7 @@ I chose to use Sqlite as it makes for an easy portable database.  The database i
 
 ## Test Data
 
-The database is currently loaded up with the test data for exploratory purposes.
+The database is currently loaded up with test data for exploratory purposes.
 
 ### User Table
 ![User Table Test Data](images/user.png).
