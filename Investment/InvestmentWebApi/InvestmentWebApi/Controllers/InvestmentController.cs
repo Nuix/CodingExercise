@@ -15,12 +15,12 @@ public class InvestmentController : ControllerBase {
     _portfolioManager = portfolioManager;
   }
 
-  [HttpGet("foruser/{userId}")]
+  [HttpGet("ForUser/{userId}")]
   public IEnumerable<InvestmentSummary> GetInvestments(int userId) {
     return _portfolioManager.GetInvestments(userId);
   }
 
-  [HttpGet("detailed/{investmentId}")]
+  [HttpGet("Detailed/{investmentId}")]
   [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(InvestmentDetails))]
   [ProducesResponseType(StatusCodes.Status404NotFound)]
   public IActionResult GetInvestmentDetails(int investmentId) {

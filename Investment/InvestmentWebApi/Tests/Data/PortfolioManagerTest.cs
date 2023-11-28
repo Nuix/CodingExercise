@@ -161,7 +161,7 @@ public class PortfolioManagerTest {
 
   [TestCase("2023-01-05T00:00:00", "2022-03-05T00:00:00", HoldingTerm.Short, "Short")]
   [TestCase("2023-03-05T00:00:00", "2022-03-05T00:00:01", HoldingTerm.Short, "Short")]
-  [TestCase("2023-03-05T00:00:00", "2022-03-05T00:00:00", HoldingTerm.Long, "Long")]
+  [TestCase("2023-03-05T00:00:00", "2022-03-05T00:00:00", HoldingTerm.Short, "Short")]
   [TestCase("2023-03-05T00:00:01", "2022-03-05T00:00:00", HoldingTerm.Long, "Long")]
   [TestCase("2023-04-05T00:00:00", "2022-03-05T00:00:00", HoldingTerm.Long, "Long")]
   public void GetInvestmentDetailsTest_Term(

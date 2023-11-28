@@ -18,3 +18,33 @@ The database is currently loaded up with test data for exploratory purposes.
 
 ### Investment Table
 ![Investment Table Test Data](images/investment.png).
+
+## Running
+To run this, navigate to InvestmentWebApi/InvestmentWebApi directory and
+execute 
+```dotnet run```
+
+This should start a WebAPI on your machine.  It will output a URL where it is listening.
+
+To get a list of current investments for the user, send a request to:
+```
+localhost:[port]/investment/foruser/[userId]
+```
+The database currently contains 5 users with IDs ranging from 1 to 5.
+
+
+To get details for a user's investment, send a request to:
+```
+localhost:[port]/investment/foruser/[investmentId]
+```
+The database currently contains 11 investments with IDs ranging from 1 to 11.  Alternatively, you can pick an investmentId from the response to the foruser API call.
+
+There is also a swagger interface running at:
+```
+localhost:[port]/swagger/index.html
+```
+
+## Testing
+To run unit tests, navigate to InvestmentWebApi/Tests directory and
+execute 
+```dotnet test```

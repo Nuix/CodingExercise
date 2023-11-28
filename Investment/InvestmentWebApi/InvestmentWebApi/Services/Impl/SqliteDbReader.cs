@@ -7,17 +7,15 @@ namespace InvestmentWebApi.Services.Api;
 /// Implementation of IDbReader using a Sqlite database.
 /// </summary>
 public class SqliteDbReader : IDbReader, IDisposable, IAsyncDisposable {
-  private readonly string _connectionString;
-  private SqliteConnection _connection;
+  private readonly SqliteConnection _connection;
 
   private readonly ILogger<SqliteDbReader> _logger;
 
   public SqliteDbReader(ILogger<SqliteDbReader> logger) : this("Data Source=investments.db", logger) { }
 
   public SqliteDbReader(string connectionString, ILogger<SqliteDbReader> logger) {
-    _connectionString = connectionString;
     _logger = logger;
-    _connection = new SqliteConnection(_connectionString);
+    _connection = new SqliteConnection(connectionString);
     try {
       _connection.Open();
     }

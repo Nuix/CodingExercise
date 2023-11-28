@@ -18,7 +18,7 @@ public class PortfolioManager : IPortfolioManager {
     IEnumerable<InvestmentRecord> investmentRecords = _dbReader.GetInvestmentsForUser(userId);
 
     return investmentRecords.Select(i =>
-        new InvestmentSummary(i.InvestmentId, i.StockName)
+        new InvestmentSummary(i.InvestmentId, i.StockName??"N/A")
     ).ToList();
   }
 

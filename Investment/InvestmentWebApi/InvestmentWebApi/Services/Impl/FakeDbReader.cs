@@ -15,6 +15,9 @@ public class FakeDbReader : IDbReader {
   }
   
   public void AddInvestmentDetailed(InvestmentDetailedRecord? investment) {
+    if (investment == null) {
+      return;
+    }
     _investmentsDetailed[investment.InvestmentId] = investment;
   }
   
