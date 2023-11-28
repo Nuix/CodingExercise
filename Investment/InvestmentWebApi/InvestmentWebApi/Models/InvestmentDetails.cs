@@ -1,18 +1,51 @@
-namespace InvestmentWebApi.Models; 
+namespace InvestmentWebApi.Models;
 
 public class InvestmentDetails {
-  public enum HoldingTerm {
-    Short,
-    Long
+  public InvestmentDetails(
+      decimal shareCount, decimal costBasis,
+      decimal currentValue, decimal currentPrice, HoldingTerm term,
+      decimal totalGainLoss, string termString) {
+    ShareCount = shareCount;
+    CostBasis = costBasis;
+    CurrentValue = currentValue;
+    CurrentPrice = currentPrice;
+    Term = term;
+    TotalGainLoss = totalGainLoss;
+    TermString = termString;
   }
+
+  /// <summary>
+  /// Number of shares the user is holding.
+  /// </summary>
+  public decimal ShareCount { get; }
   
-  public int InvestmentId { get; set; }
-  public String Name { get; set; }
+  /// <summary>
+  /// The price of a single share at the time this position was opened.
+  /// </summary>
+  public decimal CostBasis { get; }
   
-  public Decimal ShareCount { get; set; }
-  public Decimal CostBasis { get; set; }
-  public Decimal CurrentValue { get; set; }
-  public Decimal CurrentPrice { get; set; }
-  public HoldingTerm Term { get; set; }
-  public Decimal TotalGainLoss { get; set; }
+  /// <summary>
+  /// The current value of all of the shares of this stock held by the user.
+  /// </summary>
+  public decimal CurrentValue { get; }
+  
+  /// <summary>
+  /// The current price of a single share of the stock.
+  /// </summary>
+  public decimal CurrentPrice { get; }
+  
+  /// <summary>
+  /// Whether the shares are held long term or short term.
+  /// </summary>
+  public HoldingTerm Term { get; }
+  
+  /// <summary>
+  /// Human readable version of the Term.
+  /// </summary>
+  public string TermString { get; }
+  
+  /// <summary>
+  /// The difference the current value of all of the shares of the stock vs their value at acquisition.
+  /// </summary>
+  public decimal TotalGainLoss { get; }
 }
