@@ -26,14 +26,14 @@ namespace InvestmentPerformanceApi.Controllers
         [HttpGet("getUserInvestments/{userId}")]
         public async Task<ActionResult> GetUserInvestments(int userId)
         {
-            var dbUser = await _service.getUserInvestmentsAsync(userId);
+            var userInvestment = await _service.getUserInvestmentsAsync(userId);
 
-            if (dbUser == null)
+            if (userInvestment == null)
             {
-                return BadRequest();
+                return BadRequest("The userId provided could not be found.");
             }
 
-            return Ok(dbUser);
+            return Ok(userInvestment);
         }
 
         [HttpGet("getInvestmentDetails/{userId:int}/{investmentId:int}")]
@@ -43,7 +43,7 @@ namespace InvestmentPerformanceApi.Controllers
             
             if (investment == null)
             {
-                return BadRequest();   
+                return BadRequest("The userId or investmentId provided cannot be found.");   
             }
 
             return Ok(investment);
