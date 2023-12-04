@@ -71,6 +71,19 @@ namespace InvestmentPerformanceApi.Services
                 }
             }
 
+            // this means we didn't find any investments for the user. Just return the user information and an empty investments list.
+            if(responseList.Count == 0)
+            {
+                var responseObj = new
+                {
+                    UserId = dbUser.UserId,
+                    UserName = dbUser.UserName,
+                    Investments = new List<object> { }
+                };
+                var jsonResponseNoInvestments = JsonConvert.SerializeObject(responseObj, Formatting.Indented);
+                return jsonResponseNoInvestments;
+            }
+
             var jsonResponse = JsonConvert.SerializeObject(responseList, Formatting.Indented);
             return jsonResponse;
         }

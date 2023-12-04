@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|c:\\users\\tyler\\source\\repos\\codingexercise\\investmentperformanceapi\\services\\investmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|solutionrelative:services\\investmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|c:\\users\\tyler\\source\\repos\\codingexercise\\investmentperformanceapi\\tests\\investmentperformancecontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|solutionrelative:tests\\investmentperformancecontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|c:\\users\\tyler\\source\\repos\\codingexercise\\investmentperformanceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|c:\\users\\tyler\\source\\repos\\codingexercise\\investmentperformanceapi\\services\\investmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|solutionrelative:services\\investmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A2A0619-4600-465E-B36E-0EC09CA8A02B}|InvestmentPerformanceApi.csproj|c:\\users\\tyler\\source\\repos\\codingexercise\\investmentperformanceapi\\services\\iinvestmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -68,7 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InvestmentPerformanceControllerTest.cs",
               "DocumentMoniker": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Tests\\InvestmentPerformanceControllerTest.cs",
               "RelativeDocumentMoniker": "Tests\\InvestmentPerformanceControllerTest.cs",
@@ -89,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "InvestmentService.cs",
               "DocumentMoniker": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Services\\InvestmentService.cs",
               "RelativeDocumentMoniker": "Services\\InvestmentService.cs",
               "ToolTip": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Services\\InvestmentService.cs",
               "RelativeToolTip": "Services\\InvestmentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-03T17:55:08.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -110,12 +110,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-03T14:55:07.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-03T14:55:07.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InvestmentPerformanceController.cs",
               "DocumentMoniker": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Controllers\\InvestmentPerformanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\InvestmentPerformanceController.cs",
@@ -123,8 +122,7 @@
               "RelativeToolTip": "Controllers\\InvestmentPerformanceController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-03T14:48:42.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-03T14:48:42.24Z"
             },
             {
               "$type": "Document",
@@ -136,12 +134,11 @@
               "RelativeToolTip": "Services\\IInvestmentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-03T18:16:50.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-03T18:16:50.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Investment.cs",
               "DocumentMoniker": "C:\\Users\\tyler\\source\\repos\\CodingExercise\\InvestmentPerformanceApi\\Models\\Investment.cs",
               "RelativeDocumentMoniker": "Models\\Investment.cs",
@@ -149,8 +146,7 @@
               "RelativeToolTip": "Models\\Investment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-03T14:40:10.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-03T14:40:10.774Z"
             },
             {
               "$type": "Document",
@@ -162,8 +158,7 @@
               "RelativeToolTip": "InvestmentPerformanceApi.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2023-12-03T15:10:32.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-03T15:10:32.413Z"
             },
             {
               "$type": "Document",
@@ -210,8 +205,7 @@
               "RelativeToolTip": "ReadMe.MD",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAACHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2023-12-04T12:47:17.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-04T12:47:17.788Z"
             },
             {
               "$type": "Document",
