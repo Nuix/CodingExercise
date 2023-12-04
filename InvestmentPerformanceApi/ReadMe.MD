@@ -13,7 +13,7 @@ You can access the api via browser here are the following example requests:
 
 To get a list of investments for a userId:
 curl -X 'GET' \
-  'https://localhost:<port>/api/InvestmentPerformance/getUserInvestments/<userId' \
+  'https://localhost:<port>/api/InvestmentPerformance/getUserInvestments/{userId}' \
   -H 'accept: */*'
 
   example response should be something like:
@@ -41,7 +41,7 @@ curl -X 'GET' \
 
 To get details around a particular investment for a user:
 curl -X 'GET' \
-  'https://localhost:<port>/api/InvestmentPerformance/getInvestmentDetails/<userId>/<investmentId>' \
+  'https://localhost:<port>/api/InvestmentPerformance/getInvestmentDetails/{userId}/{investmentId}' \
   -H 'accept: text/plain'
 
   example response:
@@ -62,7 +62,7 @@ curl -X 'GET' \
   }
 }
 
-To run the tests you would navigate to the InvestmentPerforamnceApi\Tests folder and run the following command
+To run the tests you would navigate to the InvestmentPerforamnceApi folder and run the following command
 dotnet test
 
 
