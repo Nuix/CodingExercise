@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "InvestmentAPINuix_JBF.API.InvestmentDataController",
+    "Method": "GetAllInvestmentsForUser",
+    "RelativePath": "api/InvestmentData/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvestmentAPINuix_JBF.Models.Investment",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvestmentAPINuix_JBF.API.UserDataController",
+    "Method": "GetAllInvestmentsForUser",
+    "RelativePath": "api/UserData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "InvestmentAPINuix_JBF.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
