@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "InvestmentAPINuix-JBF\\bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/3c349cea-ce75-4173-9d91-73c0e43b9c74/resourceGroups/DB_Resources/providers/Microsoft.Web/sites/InvestmentAPINuixChallenge"
+}
