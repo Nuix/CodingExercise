@@ -1,0 +1,20 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  investmentperformancewebapi:
+    build:
+      context: "/Users/solomon/Documents/GitHub/CodingExercise/InvestmentPerformanceWebApi"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/InvestmentPerformanceWebApi.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "investmentperformancewebapi:dev"
+    ports: []
+    volumes:
+    - "/Users/solomon/Documents/GitHub/CodingExercise/InvestmentPerformanceWebApi:/app:rw"
+    - "/Users/solomon/Documents/GitHub/CodingExercise:/src:rw"
+    - "/Users/solomon/.nuget/packages:/root/.nuget/packages"
+    working_dir: "/app"
