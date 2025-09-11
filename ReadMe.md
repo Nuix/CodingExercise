@@ -1,28 +1,52 @@
-# Coding Exercise
-> This repository holds coding exercises for candidates going through the hiring process.
+# Investment Performance Web API
 
-You should have been assigned one of the coding exercises in this list.  More details can be found in the specific md file for that assignment.
+## Prerequisites
+- .NET SDK 8.0+
+- Docker + Docker Compose (optional, for containerized run)
 
-Instructions: Fork this repository, do the assigned work, and submit a pull request for review.
+## Run locally (using launchSettings profile)
+1. Restore and build:
+   ```bash
+   dotnet restore
+   dotnet build
+   ```
+2. Run with the "InvestmentPerformanceWebApi" launch profile:
+   ```bash
+   dotnet run --launch-profile "InvestmentPerformanceWebApi"
+   ```
+    - In IDEs, select the desired launch profile from the run configuration and start debugging/run.
+3. Browse:
+    - Swagger UI: http://localhost:5113/swagger/index.html
+    - Health: http://localhost:5113/Investment/health
 
-[Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
+Note: The app seeds demo data on startup.
 
-[Online Ordering SQL](OnlineOrderingSQL.md#online-ordering)
+## Run with Docker Compose
+1. Build and start:
+   ```bash
+   docker compose up --build
+   ```
+2. Browse (use the port published in your compose file/output):
+    - Swagger UI: http://localhost:5001/swagger/index.html
+    - Health: http://localhost:5001/Investment/health
 
-# License
+## Run tests
+From the solution root (or tests project directory):
+   ```bash
+   dotnet test
+   ```
+## Quick request examples
+- Health:
+  ```bash
+  curl http://localhost:PORT/Investment/health
+  ```
+- Investments for a user:
+  ```bash
+  curl http://localhost:PORT/Investment/1001
+  ```
+- Investment details:
+  ```bash
+  curl http://localhost:PORT/Investment/1001/1
+  ```
 
-```
-Copyright 2021 Nuix
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+Replace PORT with the port configured by your selected launch profile or Docker Compose.
