@@ -2,7 +2,7 @@
 Submitted by Ben Sgroi
 
 ## Running the Code
-The API is written in .NET Core 8. From the InvestmentPerformance folder, run `dotnet run` to start the web server. When run locally, it will use a SQL Server Express LocalDB with seeded data (see `DbInitializer.cs`). Use Postman or similar tools to run the APIs. The current user ID should be set in a request header "UserID".
+The API is written in .NET Core 8. From the InvestmentPerformance folder, run `dotnet run` to start the web server. When run locally, it will create a SQL Server Express LocalDB with seeded data (see `DbInitializer.cs`). Use Postman or similar tools to run the APIs. The current user ID should be set in a request header "UserID".
 
 The latest version of AutoMapper requires a license key. [Create one on their site](https://automapper.io/) and set it in `appsettings.json` or in an environment variable named `AutoSettings__LicenceKey`.
 
