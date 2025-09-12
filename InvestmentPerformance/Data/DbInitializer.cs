@@ -4,7 +4,7 @@ namespace InvestmentPerformance.Data
 {
     public static class DbInitializer
     {
-        public static void Initialize(Models.InvestmentContext context)
+        public static void Initialize(InvestmentContext context)
         {
             context.Database.EnsureCreated();
 

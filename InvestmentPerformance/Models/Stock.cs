@@ -8,6 +8,6 @@
         public decimal CurrentPricePerShare { get; set; }
         public int TotalNumberOfShares { get; set; }
 
-        public ICollection<Investment> Investments { get; set; }
+        public ICollection<Investment> Investments { get; set; } = new List<Investment>();
     }
 }
