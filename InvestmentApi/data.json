@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@example.com"
+    }
+  ],
+  "investments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "ticker": "MSFT",
+      "units": 10,
+      "costBasis": 310.50
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "ticker": "AAPL",
+      "units": 5,
+      "costBasis": 180.10
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "ticker": "NVDA",
+      "units": 2,
+      "costBasis": 800.00
+    }
+  ]
+}
