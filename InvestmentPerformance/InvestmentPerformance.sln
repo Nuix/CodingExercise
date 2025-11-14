@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformance.Api", "InvestmentPerformance.Api.csproj", "{A220351A-4C15-4345-B30F-5B4FEB4CEFAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformance.Tests", "..\InvestmentPerformance.Tests\InvestmentPerformance.Tests.csproj", "{080578E6-F472-49B0-B7EC-9FBB5703B49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A220351A-4C15-4345-B30F-5B4FEB4CEFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A220351A-4C15-4345-B30F-5B4FEB4CEFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A220351A-4C15-4345-B30F-5B4FEB4CEFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A220351A-4C15-4345-B30F-5B4FEB4CEFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{080578E6-F472-49B0-B7EC-9FBB5703B49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080578E6-F472-49B0-B7EC-9FBB5703B49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080578E6-F472-49B0-B7EC-9FBB5703B49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080578E6-F472-49B0-B7EC-9FBB5703B49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

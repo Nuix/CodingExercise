@@ -1,0 +1,8 @@
+# Build
+bin/
+obj/
+TestResults/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
