@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceWebAPI", "InvestmentPerformanceWebAPI.csproj", "{5CA0090A-5C1D-4362-AA50-598E5FC6D34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceWebAPI.Tests", "..\InvestmentPerformanceWebAPI.Tests\InvestmentPerformanceWebAPI.Tests.csproj", "{398C4B37-404A-4E64-BF8C-244EFD2526B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CA0090A-5C1D-4362-AA50-598E5FC6D34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA0090A-5C1D-4362-AA50-598E5FC6D34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA0090A-5C1D-4362-AA50-598E5FC6D34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA0090A-5C1D-4362-AA50-598E5FC6D34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398C4B37-404A-4E64-BF8C-244EFD2526B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398C4B37-404A-4E64-BF8C-244EFD2526B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398C4B37-404A-4E64-BF8C-244EFD2526B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398C4B37-404A-4E64-BF8C-244EFD2526B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05C36DCB-225B-4E6A-B55F-4AA0A6B5C707}
+	EndGlobalSection
+EndGlobal
