@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/InvestmentPerformanceWebApi/.vs/InvestmentPerformanceWebApi
+/InvestmentPerformanceWebApi/InvestmentPerformanceApi.Tests/bin/Debug/net8.0
+/InvestmentPerformanceWebApi/InvestmentPerformanceApi.Tests/obj
+/InvestmentPerformanceWebApi/InvestmentPerformanceWebApi/bin/Debug/net8.0
+/InvestmentPerformanceWebApi/InvestmentPerformanceWebApi/obj
+/InvestmentPerformanceWebApi/InvestmentPerformanceWebApi/app.db
+/InvestmentPerformanceWebApi/InvestmentPerformanceWebApi/app.db-shm
+/InvestmentPerformanceWebApi/InvestmentPerformanceWebApi/app.db-wal

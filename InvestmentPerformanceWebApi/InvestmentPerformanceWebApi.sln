@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceWebApi", "InvestmentPerformanceWebApi\InvestmentPerformanceWebApi.csproj", "{42DE2698-83AE-4E5E-81BF-C919DDD7E84B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceApi.Tests", "InvestmentPerformanceApi.Tests\InvestmentPerformanceApi.Tests.csproj", "{F237000A-0889-4FAD-AA52-734DA54D833D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42DE2698-83AE-4E5E-81BF-C919DDD7E84B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DE2698-83AE-4E5E-81BF-C919DDD7E84B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DE2698-83AE-4E5E-81BF-C919DDD7E84B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DE2698-83AE-4E5E-81BF-C919DDD7E84B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F237000A-0889-4FAD-AA52-734DA54D833D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F237000A-0889-4FAD-AA52-734DA54D833D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F237000A-0889-4FAD-AA52-734DA54D833D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F237000A-0889-4FAD-AA52-734DA54D833D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56360198-CE0B-4098-96BC-C825BC9B957A}
+	EndGlobalSection
+EndGlobal
