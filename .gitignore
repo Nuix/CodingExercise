@@ -1,0 +1,10 @@
+# Env
+**/.idea
+*.DotSettings.user
+
+# Build
+**/bin
+**/obj
+
+appsettings.Development.json
+appsettings.Production.json

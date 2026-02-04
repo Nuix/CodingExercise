@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".SolutionItems", "{11A5F59E-43B5-4273-A73E-04B392467E44}"
+	ProjectSection(SolutionItems) = preProject
+		..\InvestmentPerformanceWebAPI.md = ..\InvestmentPerformanceWebAPI.md
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Return.Web.Api", "Return.Web.Api\Return.Web.Api.csproj", "{44714CFB-D275-43B7-BB83-9C06477C284D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Returns.Web.Api.Tests", "Returns.Web.Api.Tests\Returns.Web.Api.Tests.csproj", "{19F947EE-9404-416F-8DC9-8D1B73327643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Returns.Models", "Returns.Models\Returns.Models.csproj", "{3D4A069B-6529-4613-9B1A-B95B0011E17F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44714CFB-D275-43B7-BB83-9C06477C284D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44714CFB-D275-43B7-BB83-9C06477C284D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44714CFB-D275-43B7-BB83-9C06477C284D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44714CFB-D275-43B7-BB83-9C06477C284D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F947EE-9404-416F-8DC9-8D1B73327643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F947EE-9404-416F-8DC9-8D1B73327643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F947EE-9404-416F-8DC9-8D1B73327643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F947EE-9404-416F-8DC9-8D1B73327643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4A069B-6529-4613-9B1A-B95B0011E17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4A069B-6529-4613-9B1A-B95B0011E17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4A069B-6529-4613-9B1A-B95B0011E17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4A069B-6529-4613-9B1A-B95B0011E17F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
