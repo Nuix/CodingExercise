@@ -159,4 +159,13 @@ public sealed class InvestmentApiTests
         using var client = factory.CreateClient();
         Assert.Equal(HttpStatusCode.OK, (await client.GetAsync(path)).StatusCode);
     }
+
+    [Fact]
+    public async Task OpenApiUsesCurrentOriginSoInteractiveRequestsWorkBehindHttpsProxy()
+    {
+        using var factory = new ApiFactory();
+        using var client = factory.CreateClient();
+        var document = await client.GetFromJsonAsync<JsonElement>("/openapi/v1.json");
+        Assert.Equal("/", Assert.Single(document.GetProperty("servers").EnumerateArray()).GetProperty("url").GetString());
+    }
 }

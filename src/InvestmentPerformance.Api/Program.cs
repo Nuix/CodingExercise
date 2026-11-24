@@ -38,6 +38,8 @@ builder.Services.AddOpenApi(options => options.AddDocumentTransformer((document,
             "User 1 has investments 1, 2 and 3; user 2 has investment 4; user 3 has no investments. " +
             "All values use USD. Each investment represents one purchase lot. No authentication is configured."
     };
+    // Resolve against the caller's origin, including HTTPS at an external reverse proxy.
+    document.Servers = [new OpenApiServer { Url = "/" }];
     return Task.CompletedTask;
 }));
 
