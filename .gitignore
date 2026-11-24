@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/TestResults/
+.vs/
+.idea/
+.DS_Store
+*.db
+*.db-shm
+*.db-wal
+.env
+*.user

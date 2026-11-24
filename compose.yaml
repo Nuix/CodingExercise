@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - investments:/data
+    restart: unless-stopped
+    mem_limit: 384m
+    cpus: 0.5
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
+
+volumes:
+  investments:

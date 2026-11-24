@@ -1,0 +1,59 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore
+      - run: dotnet build --configuration Release --no-restore
+      - run: dotnet test --configuration Release --no-build --logger "trx;LogFileName=tests.trx"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: '**/TestResults/*.trx'
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: investment-performance:ci
+      - name: Verify container startup and persistence
+        run: |
+          docker volume create investment-ci-data
+          docker run -d --name investment-ci --cap-drop ALL --security-opt no-new-privileges --mount source=investment-ci-data,target=/data -p 127.0.0.1:8080:8080 investment-performance:ci
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/health; then break; fi
+            sleep 2
+          done
+          curl --fail --silent http://127.0.0.1:8080/api/users/1/investments/1 | python3 -c 'import json,sys; d=json.load(sys.stdin); assert d["currentValue"] == 1150 and d["totalGainLoss"] == 150'
+          docker exec investment-ci dotnet InvestmentPerformance.Api.dll --check-health
+          docker stop investment-ci
+          docker rm investment-ci
+          docker run --rm --user 1654:1654 --mount source=investment-ci-data,target=/data python:3.13-slim python -c 'import sqlite3; db=sqlite3.connect("/data/investments.db"); db.execute("UPDATE Investments SET CurrentPrice = ? WHERE Id = 1", ("93.125",)); db.commit()'
+          docker run -d --name investment-ci --cap-drop ALL --security-opt no-new-privileges --mount source=investment-ci-data,target=/data -p 127.0.0.1:8080:8080 investment-performance:ci
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/health; then break; fi
+            sleep 2
+          done
+          curl --fail --silent http://127.0.0.1:8080/api/users/1/investments | python3 -c 'import json,sys; assert len(json.load(sys.stdin)) == 3'
+          curl --fail --silent http://127.0.0.1:8080/api/users/1/investments/1 | python3 -c 'import json,sys; assert json.load(sys.stdin)["currentPrice"] == 93.125'
+      - name: Container logs
+        if: always()
+        run: docker logs investment-ci
